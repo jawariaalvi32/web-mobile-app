@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .heading{
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+    img{
+       margin-left: 35%;
+    }
+    label{
+        text-transform: uppercase;
+        display: inline-block;
+        width:150px;
+        text-align: right;
+        padding-right: 2%;
+        padding-bottom: 1%;
+    }
+    .body{
+        background-color: blueviolet;
+        margin: 2%;
+        padding: 2%;
+    }
+    .btn{
+        padding-left: 30%;
+    }
+</style>
+<body>
+    <img src="images/logo.png" alt="logo">
+    <h1 class="heading" > Student registeration form</h1>
+    <div class="body">
+        <form  action="success.html">
+        <label>first name</label>
+        <input type="text" placeholder="Enter first name" required>
+        (max 30 characteristics from A-Z and a-z)<br>
+
+        <label>last name</label>
+        <input type="text" placeholder="Enter last name" required>
+        (max 30 characteristics from A-Z and a-z)<br>
+
+        <label>date of birth</label>
+        <input type="date" ><br>
+
+        <label>mobile number</label>
+        <input type="number" placeholder="Enter mobile number" required>
+        (10 digit number)<br>
+
+        <label>email id</label>
+        <input type="email" placeholder="Enter email" required><br>
+
+        <label>gender</label>
+        <input type="radio" name="gender" value="female">female
+        <input type="radio"  name="gender" value="male">male<br>
+
+        <label>address</label>
+        <textarea rows="4" cols="50"></textarea><br>
+
+        <label>city</label>
+        <input type="text" placeholder="Enter city name" required>
+        (max 30 characteristics from A-Z and a-z)<br>
+
+        <label>pin code</label>
+        <input type="number" placeholder="Enter PIN code" required>
+        (6 digit number)<br>
+
+        <label>state</label>
+        <input type="text" placeholder="Enter state " required>
+        (max 30 characteristics from A-Z and a-z)<br>
+
+        <label>country</label>
+        <input type="text" placeholder="Enter coutry name" required><br>
+
+        <label>hobbies</label>
+        <input type="checkbox" id="hobbies" name="drawing" value="drawing">
+        <label> drawing</label>
+        <input type="checkbox" id="hobbies" name="singing" value="singing">
+        <label> singing</label>
+        <input type="checkbox" id="hobbies" name="dancing" value="dancing">
+        <label> dancing</label>
+        <input type="checkbox" id="hobbies" name="sketching" value="sketching">
+        <label> sketching</label>
+        <input type="checkbox" id="hobbies" name="others" value="others">
+        <label> others</label>
+
+        <label>qualification</label>
+        <table>
+            <tr>
+                <th>S.NO</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Graduation</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Masters</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>(10 char max)</td>
+                <td>(upto 2 decimal)</td>
+                <td></td>
+            </tr>
+        </table>
+        
+        <label>Courses applied for</label>
+        <input type="radio" name="course" value="BCA">BCA
+        <input type="radio"  name="course" value="B.COM">B.COM
+        <input type="radio" name="course" value="BSC">BSC
+        <input type="radio" name="course" value="B.A">B.A<br>
+
+        <div class="btn">
+        <input type="submit">
+        <input type="reset" value="Reset">
+        </div>
+        </form>
+
+    </div>
+</body>
+</html>
