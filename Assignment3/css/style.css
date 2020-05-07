@@ -1,0 +1,70 @@
+#header-top, #copyright-footer{
+	background-color: #2162C2;
+	width: 100%;
+	padding-left: 12%;;
+}
+#header-top p{
+	font-size: 15px;
+	text-align: center;
+}
+#header-top button{
+    font-size: 10px;
+}
+.dropdown-menu{
+	position: absolute;
+	z-index: 1;
+}
+.carousel{
+	z-index: -1;
+}
+.nav-item:hover{
+	border-top-left-radius:30px;
+	border-top-right-radius:30px;
+	border-bottom-left-radius:30px;
+	border-bottom-right-radius:30px;
+	background-color:#2162C2;
+}
+.intro{
+	background-color: #f7f8fa !important;
+	padding-left: 18%;
+	padding-right: 18%;
+}
+#count{
+	background-color: #2162C2;
+	padding-left: 10%;
+	padding-right: 10%;
+
+}
+.top-btn{
+	padding-left: 2%;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+}
+.services .card{
+	background-color: white;
+	border-radius: 0;
+	box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.16);
+	margin-top: 5%;
+}
+.services{
+	background-color: #f7f8fa !important;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+.vision .card{
+    background-color:#f7f8fa;
+	border-radius: 0;
+	margin-top: 5%;
+}
+.footer{
+	padding-left: 2%;
+}
+.footericon {
+	border-radius: 50%;
+	background-color:#2162C2;
+}
+.contacticon{
+	color: #46C263;
+
+}
+
