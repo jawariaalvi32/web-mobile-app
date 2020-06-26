@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="app.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-0 col-lg-3 col-xl-4"></div>
+            <div class="col-md-6 col-lg-5 col-sm-12 col-xl-4" id="calculator">
+                <div id="result"></div>
+                <div id="output"></div>
+                <div id="error"></div>
+                <div id="buttons">
+                    <div class="row">
+                        <div class="col-sm-3 col-3">
+                            <button class="operator gray" onclick="clearlast('CE')">CE</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="operator gray" onclick="clearData()">C</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="operator gray" onclick="getData('%')">%</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="operator blue" onclick="getData('/')">/</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="number" onclick="getData('7')">7</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="number" onclick="getData('8')">8</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="number" onclick="getData('9')">9</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="operator orange" onclick="getData('*')">x</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="number" onclick="getData('4')">4</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="number" onclick="getData('5')">5</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="number" onclick="getData('6')">6</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="operator pink" onclick="getData('-')">-</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="number" onclick="getData('1')">1</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="number" onclick="getData('2')">2</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="number" onclick="getData('3')">3</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="operator lightblue" onclick="getData('+')">+</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="space" id="space">u</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="number" onclick="getData('0')">0</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="space" id="space">u</button>
+                        </div>
+                        <div class="col-sm-3 col-3">
+                            <button class="operator purple" onclick="calculate()">=</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3 col-xl-4 col-sm-0"></div>
+        </div>
+    </div>
+</body>
+</html>
