@@ -1,0 +1,61 @@
+body {
+    background-color: white;
+}
+h1 {
+    font-size: 150px;
+    font-weight: 200%;
+    font-family: sans-serif;
+}
+h2 {
+    text-align: center;
+}
+#start {
+    background-color: #17a69d;
+}
+#pause {
+    background-color: #f29e25;
+}
+#reset {
+    background-color: #fb647f;
+}
+#save {
+    color: #4387d0;
+}
+#start:focus, #pause:focus, #reset:focus {
+    background-color: #000;
+    color: white;
+}
+#save:focus {
+    color: black;
+}
+i {
+    font-size: 150px;
+}
+#record {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 2%;
+}
+table {
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#sec, #msec {
+    margin-left: 5%;
+}
+@media only screen and (max-width: 383px) {
+    h1 {
+        font-size: 50px;
+        font-weight: 200%;
+        font-family: sans-serif;   
+    }
+    #record {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 2%;
+    }
+    #sec, #msec {
+        margin-left: 2%;
+    }
+  }
