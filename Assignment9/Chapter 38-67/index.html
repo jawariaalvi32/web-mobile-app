@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="app.js"></script> 
+</head>
+<body>
+    <h3 class="mt-5">Chapter #38-48 - FUNCTIONS, SWITCH STATEMENTS, WHILE… DOWHILE LOOPS</h3>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-2">
+                <button onclick="power(2,2)">Power</button>
+            </div>
+            <div class="col-md-2">
+                <button onclick="leapYear()">Leap Year</button>
+            </div>
+            <div class="col-md-2">
+                <button onclick="area(3,4,4)">area</button>
+            </div>
+            <div class="col-md-2">
+                <button onclick="main(80,68,60)">Marks</button>
+            </div>
+            <div class="col-md-2">
+                <button onclick="ind()">IndexOf</button>
+            </div>
+            <div class="col-md-2">
+                <button onclick="vowDel()">Vowel Delete</button>
+            </div>
+            <div class="col-md-2">
+                <button onclick="occurance()">Occurance</button>
+            </div>
+            <div class="col-md-2">
+                <button onclick="metres()">metres</button>
+            </div>
+            <div class="col-md-2">
+                <button onclick="feet()">feet</button>
+            </div>
+            <div class="col-md-2">
+                <button onclick="inches()">feet</button>
+            </div>
+            <div class="col-md-2">
+                <button onclick="cm()">cm</button>
+            </div>
+            <div class="col-md-2">
+                <button onclick="OT()">Employees OverTime</button>
+            </div>
+            <div class="col-md-2">
+                <button onclick="notes()">Currency Notes</button>
+            </div>
+        </div>
+    </div>
+    <h3 class="mt-5">Chapter #43-48 - EVENTS</h3>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#" onclick="link()">Click Here</a>
+            </div>
+            <div class="col-md-12 d-flex" onclick="imgClck()">
+               <img src="images/download (1).jpg" class="img">
+               <img src="images/download (2).jpg" class="img">
+               <img src="images/download.jpg" class="img">
+            </div>
+            <div class="col-md-12 mt-5">
+                <table class="table" id="tbl">
+                    <thead>
+                      <tr>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>0</td>
+                        <td>Doe</td>
+                        <td>X</td>
+                        <td><button onclick="del(this)">Del</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Moe</td>
+                        <td>XII</td>
+                        <td><button onclick="del(this)">Del</button></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Dooley</td>
+                        <td>IX</td>
+                        <td><button onclick="del(this)">Del</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="col-md-12 mt-5">
+                <img src="images/download (1).jpg" id="imgHover" onmouseover="enter()" onmouseout="out()">
+            </div>
+            <div class="col-md-12 mt-5">
+                <h1>Counter</h1>
+                <h3 id="counter">0</h3>
+                <button onclick="inc()">Increament</button>
+                <button onclick="dec()">decreament</button>
+            </div>
+        </div>
+    </div>
+    <h3 class="mt-5"> Chapter- 49-52  EVENTS</h3>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group">
+                      <label>Email address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label>Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="signup()">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-12 mt-5">
+               <img src="images/download (1).jpg" class="img">
+               <h3>MOBILE PHONE</h3><br>
+               <p>
+                   Awesome screen built for cinema
+                   Immerse yourself in the large 6.5 inch Infinity-O Display of Galaxy A21s.
+                   A wide aspect ratio fills your screen with content from edge to edge.
+                   Watch your favorite videos, games and live streams on its HD+ display.
+                </p><br>
+                <a href="#" id="a" onclick="readmore()">Read more ..</a>
+                <p class="hiden" id="det">
+                    Awesome screen built for cinema
+                    Immerse yourself in the large 6.5 inch Infinity-O Display of Galaxy A21s.
+                    A wide aspect ratio fills your screen with content from edge to edge.
+                    Watch your favorite videos, games and live streams on its HD+ display.
+                </p>
+            </div>
+            <div class="col-md-12 mt-5">
+                <form id="form-edit">
+                    <div class="form-group">
+                      <label>Name</label>
+                      <input class="form-control" id="name" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                      <label>Password</label>
+                      <input class="form-control" id="class" placeholder="Class">
+                    </div>
+                </form>
+                <button class="btn btn-primary" id="save">Submit</button>
+
+                <table class="table" id="tblWithEdit">
+                    <thead>
+                      <tr>
+                        <th scope="col">Index</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Class</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>X</td>
+                        <td><button onclick="edit(this)">Edit</button></td>
+                        <td><button onclick="del(this)">Delete</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Mark</td>
+                        <td>X</td>
+                        <td><button onclick="edit(this)">Edit</button></td>
+                        <td><button onclick="del(this)">Delete</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Mark</td>
+                        <td>X</td>
+                        <td><button onclick="edit(this)">Edit</button></td>
+                        <td><button onclick="del(this)">Delete</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+    <h3 class="mt-5">Chapter 53- 58 Events</h3>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="images/1.jpg" alt="" width="30%" onclick="showInModal(this)" data-toggle="modal" data-target="#exampleModal">
+                <img src="images/3.jpg" alt="" width="30%" onclick="showInModal(this)" data-toggle="modal" data-target="#exampleModal">
+                <img src="images/5.jpg" alt="" width="30%" onclick="showInModal(this)" data-toggle="modal" data-target="#exampleModal">
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="" alt="" id="modal-img">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="mt-5">Chapter 58 - 67 DOM</h3>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1> DOM </h1>
+                <div id="form-content" class="content">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" />
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" />
+                    <label for="email">Email</label>
+                    <input type="text" id="email-id" />
+                </div>
+                <div id="main-content" class="content">
+                    <p class="render" id="nn"> First Name : Alex</p>
+                    <p class="render" id="lastName">Last Name: Bank</p>
+                    <p class="render"> Email : alexbank@example.com</p>
+                    <p class="render"> Country : Pakistan </p>
+                    <p class="render"> contact : +92 300 1234567</p>
+                </div>
+                <button onclick="abc()">click</button>
+                <button onclick="xyz()">click</button>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
