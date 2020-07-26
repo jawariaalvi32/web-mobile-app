@@ -45,8 +45,8 @@ function createTodo({ target }){
 
 function popup(){
     document.getElementById('popup').style.cssText = 'display: flex; justify-content: center;';
-    document.getElementById('popup').innerHTML = "Complete";
-    setTimeout(() => {
-        document.getElementById('popup').style.display = 'none';
-    }, 1500);
+    // document.getElementById('popup').innerHTML = "Complete";
+    // setTimeout(() => {
+    //     document.getElementById('popup').style.display = 'none';
+    // }, 1500);
 }

@@ -5,25 +5,12 @@ body{
     justify-content: center;
 }
 
-#popup{
-    display: none;
-    position: absolute;
-    bottom: 80px;
-    background-color: rgb(81, 190, 81);
-    color: white;
-    padding: 10px 15px !important;
-    border-radius: 30px !important;
-    font-weight: 700 !important;
-    transition: ease-in 0.5ms;
-}
-
 #app{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     width: 350px;
 }
 
@@ -31,30 +18,6 @@ body{
     font-size: 42px;
     font-weight: 800;
     margin-bottom: 10px;
-}
-
-.input-custom{
-    width: 100%;
-    border-radius: 20px;
-    border: 1px solid rgb(177, 177, 177);
-    font-size: 18px;
-    line-height: 24px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 12px;
-}
-
-.input-custom:hover{
-    border: 1px solid rgb(82, 82, 82);
-}
-
-.input-custom:focus{
-    outline: none;
-    box-shadow: none;
-}
-
-input::placeholder{
-    color: rgb(187, 187, 187);
 }
 
 #toDo{
@@ -70,61 +33,35 @@ input::placeholder{
 
 .btn{
     color: white;
-    /* box-sizing: content-box !important; */
     font-size: 20px;
     font-weight: 600;
     padding-left: auto;
     padding-right: auto;
     width: 100%;
-    border: 1px solid rgb(177, 177, 177);
-    border-radius: 3px;
     transition: all 1.5ms;
-}
-
-.btn:hover{
-    cursor: pointer;
-    transform: scale(1.05);
+    border: 0px;
 }
 
 .btn:focus {
     outline: none;
     box-shadow: none;
-    /* transform: scale(1) !important; */
 }
 
 .done .btn{
-    /* background-color: #00c851; */
     text-decoration: line-through;
-    border: 1px solid rgba(177, 177, 177, 0.2);
-    color: rgb(173, 173, 173) !important;
+    color: rgb(173, 173, 173);
 }
 
 .done .btn:hover{
-    /* background-color: #007e33;   */
-    border: 1px solid rgba(177, 177, 177, 0.8);
-    color: #ddd !important;
+    color: #ddd;
 }
 
 .notDone .btn{
-    background-color: #ff4444;
-}
-
-.notDone .btn:hover{
-    background-color: #ca2020;
-}
-
-.footer{
-    position: fixed;
-    bottom: 0;
-    border-top: 1px solid rgba(177, 177, 177, 0.2);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #eee;
+    color: #f29e25;
 }
 
 .name a{
-    color: rgb(250, 52, 52);
+    color: #4387d0;
     text-decoration: none;
     font-weight: 600;
 }
