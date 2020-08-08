@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do APplication</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="../js/jquery.js"></script>
@@ -12,23 +13,21 @@
 </head>
 
 <body>
-
-    <div id="app">
-        <h1 class="heading">TO DO LIST</h1>
-
-        <input 
-            class="form-control" 
-            type="text" 
-            placeholder="Your task" 
-            id="newTodo"
-            onchange="createTodo(event)"
-        >
-
-        <ul id="toDo">
+    <div class="container">
+        <h1 class="mt-5">TO DO LIST</h1>
+        <div class="d-flex justify-content-center mt-3">
+            <input type="text" placeholder="Your task here" id="newTodo">
+            <button onclick="create()" class="btn btn-sm btn-success ml-3"><i class="fa fa-plus"></i></button>
+        </div>
+        <ul id="fav">
+            <h5>Favourites</h5>
         </ul>
-    </div>
-
-    <div id="popup">    
+        <ul id="toDo">
+            <h5>Inbox</h5>
+        </ul>
+    
+        <div id="popup">    
+        </div>
     </div>
    
 </body>

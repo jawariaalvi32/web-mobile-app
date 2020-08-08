@@ -1,67 +1,57 @@
-body{
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+body {
+    background-color: lavender;
 }
 
-#app{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
-}
-
-.heading{
-    font-size: 42px;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-
-#toDo{
-    text-align: center;
-    padding-left: 0 !important;
-    width: 60%;
-}
-
-.list_task{
-    list-style-type: none;
-    margin-bottom: 8px;
-}
-
-.btn{
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    padding-left: auto;
-    padding-right: auto;
+input {
+    border: none;
+    border-bottom: 2px solid black;
     width: 100%;
-    transition: all 1.5ms;
-    border: 0px;
+    background-color: lavender;
 }
-
-.btn:focus {
+input:focus {
     outline: none;
-    box-shadow: none;
 }
 
-.done .btn{
-    text-decoration: line-through;
-    color: rgb(173, 173, 173);
+#fav, #toDo {
+    display: none;
 }
 
-.done .btn:hover{
-    color: #ddd;
+h1 {
+    text-align: center;
 }
 
-.notDone .btn{
-    color: #f29e25;
+h5 {
+    text-align: center;
+    color: gray;
+    margin-top: 15px;
 }
 
-.name a{
-    color: #4387d0;
-    text-decoration: none;
-    font-weight: 600;
+ul li {
+    margin: 1%;
+    border-radius: 0.3em;
+    color: #666;
+    background-color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+}
+
+ul li button {
+    margin-left: 1.2em;
+    display: flex;
+    position: relative;
+    justify-content: right;
+}
+.fa-trash {
+    color: red;
+}
+
+.fa-edit {
+    color: teal;
+}
+
+li {
+   background-color: #eee;
+   margin: 5px;
 }
