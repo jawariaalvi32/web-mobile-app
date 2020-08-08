@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('quiz.jpg');
+    /* background-image: url("./images/1.jpg"); */
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.img {
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+    visibility: initial;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 5px;
+}
+
+.heading {
+    text-align: center;
+    position: relative;
+    left: 600px;
+    font-family: 'Playfair Display', serif;
+    color: red;
+    font-size: 35px;
+}
+
+#userName {
+    text-align: center;
+    position: absolute;
+    left: 4px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: burlywood;
+    font-size: 26px;
+}
+
+#score {
+    text-align: center;
+    position: absolute;
+    left: 4px;
+    font-family: 'Playfair Display', serif;
+    color: burlywood;
+    font-size: 22px;
+}
+
+#time {
+    text-align: center;
+    position: relative;
+    left: 900px;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.quizContainer {
+    width: 100vw;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    /* border: 1px solid red; */
+    width: 850px;
+    height: 350px;
+    position: absolute;
+    top: 6em;
+    /* background-color: skyblue; */
+}
+
+#q1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    margin: 10px auto;
+    position: relative;
+    top: 0em;
+}
+
+.options {
+    display: grid;
+}
+
+.btn {
+    width: 400px;
+    position: relative;
+    top: 2em;
+    text-align: center;
+    border: none;
+    border-radius: 35em;
+    background-color: darkgray;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+}
+
+.btnNext {
+    width: 300px;
+    position: relative;
+    top: 5em;
+    left: 13em;
+    text-align: center;
+    border: none;
+    border-radius: 40em;
+    background-color: green;
+    color: white;
+    margin-top: 18px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btnNext:hover {
+    background-color: lawngreen;
+    color: #000000;
+    font-size: 24px;
+    position: relative;
+    top: 4em;
+    left: 10.5em;
+}
+
+.btn:hover {
+    background-color: silver;
+    color: black;
+    font-size: 26px;
+}

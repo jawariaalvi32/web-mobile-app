@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz APplication</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="app.js"></script> 
+</head>
+
+
+<body onload="showQuestion()">
+    <div class="title">
+        <h1 class="heading" id="heading">QUIZ APPLICATION</h1>
+        <h2 id="userName"></h2>
+        <h2 id="score"><br></h2>
+        <div id="time" style="display: flex;">
+            <h3 id="mint" style=" margin-left: 5px"></h3>
+            <h3 id="sec" style=" margin-left: 5px">0 sec</h3>
+        </div>
+    </div>
+
+    <div class="quizContainer">
+        <div class="question">
+            <p id="q1">What is extension of javascript?</p>
+            <div class="options">
+                <center>
+                    <button class="btn" id="opt1" onclick="check(this)">docx</button>
+                    <button class="btn" id="opt2" onclick="check(this)">js</button>
+                    <button class="btn" id="opt3" onclick="check(this)">html</button>
+                    <button class="btn" id="opt4" onclick="check(this)">css</button>
+                </center>
+                <div id="btn">
+                    <button onclick="show()" class="btnNext" id="Nbtn">Next Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
