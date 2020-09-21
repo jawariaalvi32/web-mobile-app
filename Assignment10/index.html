@@ -3,18 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do APplication</title>
+    <title>To Do Application</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script> 
-    <script type="text/javascript" src="app.js"></script> 
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCy7wlHD8MDcmj9oBrnj8Pz9Rk-J-HnDaA",
+          authDomain: "webmobile-3375f.firebaseapp.com",
+          databaseURL: "https://webmobile-3375f.firebaseio.com",
+          projectId: "webmobile-3375f",
+          storageBucket: "webmobile-3375f.appspot.com",
+          messagingSenderId: "11026158924",
+          appId: "1:11026158924:web:5811b2bebedf9008c56be9",
+          measurementId: "G-R10QDSYBEL"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+ 
 </head>
 
 <body>
     <div class="container">
-        <h1 class="mt-5">TO DO LIST</h1>
+        <h1 class="mt-5">TO DO LIST WITH FIREBASE INTEGRATION</h1>
         <div class="d-flex justify-content-center mt-3">
             <input type="text" placeholder="Your task here" id="newTodo">
             <button onclick="create()" class="btn btn-sm btn-success ml-3"><i class="fa fa-plus"></i></button>
@@ -29,6 +47,6 @@
         <div id="popup">    
         </div>
     </div>
-   
+   <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
