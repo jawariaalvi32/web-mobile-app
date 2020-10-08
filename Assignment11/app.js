@@ -1,36 +1,6 @@
-//Student Name
+var ques_counter = 0;
+var total = 0;
 
-let name = prompt("PLEASE ENTER YOUR FULL NAME", 'Guest');
-let userName = document.getElementById('userName');
-userName.innerHTML = 'Student Name: ' + name
-let cof = confirm("Are you ready?")
-if (cof == true) {
-    start();
-} else if (cof == false) {
-    op1.disabled = true;
-    op3.disabled = true;
-    op2.disabled = true;
-    op4.disabled = true;
-}
-
-// options variable declare with id
-let id = document.getElementById('q1');
-let op1 = document.getElementById('opt1');
-let op2 = document.getElementById('opt2');
-let op3 = document.getElementById('opt3');
-let op4 = document.getElementById('opt4');
-
-//First Question Show
-function showQuestion() {
-    heading.innerHTML = "QUIZ APP <br>Question 1/" + questionsArray.length;
-    id.innerHTML = questionsArray[0].question;
-    op1.innerHTML = questionsArray[0].option[0];
-    op2.innerHTML = questionsArray[0].option[1];
-    op3.innerHTML = questionsArray[0].option[2];
-    op4.innerHTML = questionsArray[0].option[3];
-
-
-}
 //Question Array
 var questionsArray = [{
         question: "What is extension of javascript?",
@@ -124,111 +94,51 @@ var questionsArray = [{
     }
 ]
 
-//Create Timer
-let Time = document.getElementById('time');
-let sec = 0,
-    mints = 0,
-    interval,
-    secHeading = document.getElementById('sec'),
-    mintsHeading = document.getElementById('mint');
-
-function timer() {
-    sec++;
-    secHeading.innerHTML = sec + " sec";
-    if (sec >= 60) {
-        mints++;
-        mintsHeading.innerHTML = mints + " mints";
-        sec = 0;
-    }
-    if (mints == 5) {
-        sec = 0;
-        secHeading.innerHTML = "0 sec";
-        stopTime();
-        finalSubmit();
-        op1.disabled = true;
-        op3.disabled = true;
-        op2.disabled = true;
-        op4.disabled = true;
-        let NextBtn = document.getElementById('Nbtn')
-        NextBtn.disabled = true;
-    }
-}
-
-function start() {
-    setInterval(timer, 1000);
-}
-
-function stopTime() {
-    clearInterval(start)
-}
-
-function finalSubmit() {
-    score.innerHTML = "<br>Score: " + scoreCount;
-    stopTime()
-}
-let questionCount = 0;
-let questionCountHeading = 1;
-let heading = document.getElementById('heading');
-
-// Next Button Function for next question
 function show() {
-    questionCount++
-    nextQuesiton(questionCount);
-    questionCountHeading++
-    heading.innerHTML = "QUIZ APP <br>Question " + questionCountHeading + "/" + questionsArray.length;
-    op1.disabled = false;
-    op2.disabled = false;
-    op3.disabled = false;
-    op4.disabled = false;
+    var ques = document.getElementById("ques");
+    var opt1 = document.getElementById("opt1");
+    var opt2 = document.getElementById("opt2");
+    var opt3 = document.getElementById("opt3");
+    var opt4 = document.getElementById("opt4");
 
-    if (questionCount == (questionsArray.length - 1)) {
-        submit()
+    ques.innerText = questionsArray[ques_counter].question;
+    opt1.innerText = questionsArray[ques_counter].option[0];
+    opt2.innerText = questionsArray[ques_counter].option[1];
+    opt3.innerText = questionsArray[ques_counter].option[2];
+    opt4.innerText = questionsArray[ques_counter].option[3];
+
+    opt1.disabled = false;
+    opt2.disabled = false;
+    opt3.disabled = false;
+    opt4.disabled = false;
+    
+}
+
+function next() {
+    ques_counter++;
+    document.getElementById("num").innerText = "Question "+ques_counter+" of 20";
+
+    if (ques_counter < questionsArray.length) {
+        show();
+        console.log(questionsArray.length);
+    } else {
+        result();
     }
 }
 
-// Next Question Render in Screen
-function nextQuesiton(e) {
-    id.innerHTML = questionsArray[e].question;
-    let optionsElement = document.getElementsByClassName('btn');
-    for (var i = 0; i < 4; i++) {
-        optionsElement[i].innerHTML = questionsArray[e].option[i];
-
-    }
+function check(val) {
+    val.disabled = true;
+    if (val.innerText == questionsArray[ques_counter].answer) {
+        total++;
+        document.getElementById("total").innerText = "Total : " +total;
+    } 
 }
 
-let score = document.getElementById('score');
-let scoreCount = 0;
-console.log(questionsArray.length)
-
-function check(e) {
-    for (var i = 0; i < questionsArray.length; i++) {
-        if (e.innerHTML == questionsArray[i].answer) {
-            scoreCount += 10;
-            e.disabled = true;
-            console.log(scoreCount)
-        } else if (e.innerHTML != questionsArray[i].answer) {
-            e.disabled = true;
-            op1.disabled = true
-            op2.disabled = true
-            op3.disabled = true
-            op4.disabled = true
-        }
-    }
+function result() {
+    
+    document.getElementById("quiz").remove();
+    document.getElementById("result").style.display = "block";
+    document.getElementById("remarks").innerText = "You attempt 20 questions and from that "+ total +" is correct.";
+    document.getElementById("score").innerText = total;
 }
 
-function submit() {
-    let Nbtn = document.getElementById("Nbtn");
-    Nbtn.disabled = true;
-    Nbtn.remove();
-    let submitBtn = document.createElement('button');
-    let submitBtnText = document.createTextNode('Done');
-    submitBtn.setAttribute('class', 'btnNext');
-    submitBtn.setAttribute('onclick', 'finalSubmit()');
-    submitBtn.appendChild(submitBtnText);
-    // let SubmitPage = document.createElement('a');
-    // SubmitPage.setAttribute('href', 'newindex.htm');
-    // SubmitPage.appendChild(submitBtn)
-    let div = document.getElementById('btn');
-    div.appendChild(submitBtn);
-
-}
